@@ -20,8 +20,8 @@ class Login extends CI_Controller
         $this->load->helper(['form', 'url']);
 
         $this->googleClient = new \Google_Client();
-     //   $this->googleClient->setClientId('240737528000-12u8bpcus6v5fbo5258dfole60v5ij7s.apps.googleusercontent.com');
-      //  $this->googleClient->setClientSecret('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');
+        $this->googleClient->setClientId('240737528000-12u8bpcus6v5fbo5258dfole60v5ij7s.apps.googleusercontent.com');
+        $this->googleClient->setClientSecret('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');
         $this->googleClient->setRedirectUri(base_url('login/google_callback'));
         $this->googleClient->addScope('email');
         $this->googleClient->addScope('profile');
